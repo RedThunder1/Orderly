@@ -1,0 +1,72 @@
+.shops {
+
+}
+
+.options {
+    position: relative;
+    background-color: #0a0d13;
+    height: 60px;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.searchbar {
+    background-color: #1b212c;
+    position: relative;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 400px;
+    padding-left: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+    transition: ease-in-out 0.3s;
+}
+
+.searchbar:focus {
+    outline: solid 1px #1358dc;
+}
+
+.filter {
+    background-color: #1b212c;
+    height: 40px;
+    line-height: 40px;
+    width: 80px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    transition: all ease-in-out 0.2s;
+}
+
+.filter:hover {
+    transform: scale(1.05);
+}
+
+.shops_container {
+    display: flex;
+    flex-direction: row;
+    background-color: #1b212c;
+    height: 400px;
+    margin-top: 20px;
+    gap: 10px;
+    overflow: scroll;
+}
+
+.shop {
+    position: relative;
+    background-color: #0f1219;
+    height: 400px;
+    min-width: 400px;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.shop_info {
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+}

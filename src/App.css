@@ -17,3 +17,7 @@ main {
     background: linear-gradient(-45deg, rgb(28, 38, 85) 0%, rgb(17, 19, 30) 100%);
     z-index: -100;
 }
+
+a {
+    text-decoration: none;
+}
