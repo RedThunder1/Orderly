@@ -13,6 +13,8 @@
 
 .shops_searchbar {
     background-color: #1b212c;
+    color: white;
+    caret-color: white;
     position: relative;
     outline: none;
     border: none;
@@ -52,6 +54,10 @@
     margin-top: 20px;
     gap: 10px;
     overflow: scroll;
+}
+
+.shops_container > h2 {
+    padding: 10px;
 }
 
 .shops_item {
