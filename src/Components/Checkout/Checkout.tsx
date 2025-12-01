@@ -1,9 +1,10 @@
 import './Checkout.css'
 import React, {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 export default function Checkout() {
     const [items, setItems] = useState<any[]>([]);
-
+    const navigate = useNavigate();
     const cart = JSON.parse(sessionStorage.getItem("cart") as string);
 
     useEffect(() => {
@@ -13,26 +14,20 @@ export default function Checkout() {
             let price: number = 0
             for (let item of cart) {
                 price += item.price
-                console.log("new item")
                 let options: any[] = []
 
                 for (let option of Object.entries(item.customizations)) {
                     if (option.length === 2) {//Customzations are a little messed up at them moment so this is needed
-                        if (option[1] === "1") {
-                            console.log("option true bool", option, "adding", option[0], options)
-                            options.push(option[0])
+                        if (option[1] === "1") { options.push(option[0])
                         } else if (option[1] === "0") {
-                            console.log("option false bool", option, options);
                             //do nothing for now
-                        } else {
-                            console.log("option mult choice", option, "adding", option[1], options);
-                            options.push(option[1])
-                        }
+                        } else { options.push(option[1]) }
                     }
-                    console.log(options)
                 }
                 item.customizations = options
             }
+
+
             setItems(cart);
             document.getElementById("checkout_price")!!.innerText = price.toString();
         }
@@ -50,7 +45,11 @@ export default function Checkout() {
     }
 
     function purchase() {
-
+        if (items.length !== 0) {
+            navigate("/payment");
+        } else {
+            //maybe add error saying why
+        }
     }
 
     return (

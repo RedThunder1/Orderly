@@ -46,7 +46,8 @@ export default function Shop() {
 
     console.log(JSON.stringify(items));
      */
-    const [storeItems, setStoreItems] = useState<any[]>([]);
+    const [storeItems, setStoreItems] = useState<Item[]>([]);
+    const [activeItems, setActiveItems] = useState<Item[]>([]);
     const [customization, setCustomization] = useState<any[]>([]);
     const [showCustomize, setShowCustomize] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
@@ -109,6 +110,7 @@ export default function Shop() {
             document.getElementById('shop_desc')!!.innerText = state!['Description']
             let data = JSON.parse(state!['Items'])
             setStoreItems(data)
+            setActiveItems(data)
         } else {
             //Only for testing!! Can be changed to tell user the page is empty once finished
             document.getElementById('shop_name')!!.innerText = "This is a test page"
@@ -118,6 +120,22 @@ export default function Shop() {
             items.push(new Item("Burger", "A really good burger!", 8.99, [new Customization("Bacon", [])]))
             items.push(new Item("Fries", "A good side for out great burgers!", 2.99, []))
             setStoreItems(items)
+            setActiveItems(items)
+        }
+    }
+
+    function handleFilter() {
+        const filter = document.getElementById("shop_searchbar") as HTMLInputElement;
+        if (filter.value.length === 0) {
+            setActiveItems(storeItems)
+        } else {
+            let newItems: Item[] = [];
+            storeItems.forEach((item) => {
+                if (item.name.includes(filter.value)) {
+                    newItems.push(item);
+                }
+            })
+            setActiveItems(newItems);
         }
     }
 
@@ -155,13 +173,13 @@ export default function Shop() {
             </div>
 
             <div className="shop_options">
-                <input className="shop_searchbar" type="text" placeholder="Search" />
-                <div className="shop_filter">Filter</div>
+                <input className="shop_searchbar" id="shop_searchbar" type="text" placeholder="Search" />
+                <div className="shop_filter" onClick={handleFilter}>Filter</div>
             </div>
 
             <div className="shop_items_container" id="shop_items_container">
                 <div className="shop_section"><div className="section_title">Item Section</div><div className="shop_divider"/></div>
-                {storeItems.map((item, index) => (
+                {activeItems.map((item, index) => (
                     <div className="shop_item" key={index}>
                         <div className="shop_item_title">{item.name}</div>
                         <div className="shop_item_description">{item.description}</div>

@@ -22,6 +22,8 @@
 
 .shop_searchbar {
     background-color: #1b212c;
+    color: #fff;
+    caret-color: #fff;
     position: relative;
     outline: none;
     border: none;

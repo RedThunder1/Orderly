@@ -160,9 +160,9 @@
 
 input,
 textarea {
-  color: #000 !important;
-  background-color: #fff !important;
-  caret-color: #000 !important;
+  color: #000;
+  background-color: #fff;
+  caret-color: #000;
 }
 
 .payment-status.status-error {
