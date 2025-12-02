@@ -158,8 +158,7 @@
   color: #15803d;
 }
 
-input,
-textarea {
+.payment_inputs { /* This was effecting other pages so I changed it */
   color: #000;
   background-color: #fff;
   caret-color: #000;
@@ -171,13 +170,13 @@ textarea {
 }
 
 .payment-form .form-row label span {
-  color: #000 !important;
+  color: #000;
   font-weight: 600;
 }
 
 .payment-form input,
 .payment-form textarea {
-  background-color: #f3f4f6 !important;  /* soft dark gray */
+  background-color: #f3f4f6;  /* soft dark gray */
   border: 1px solid #d1d5db;
   color: #000; /* keep text readable */
 }
@@ -185,7 +184,7 @@ textarea {
 /* When user clicks into the box */
 .payment-form input:focus,
 .payment-form textarea:focus {
-  background-color: #ffffff !important;
+  background-color: #ffffff;
   border-color: #10b981;
   box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.25);
   color: #000;

@@ -105,6 +105,7 @@ const PaymentPage: React.FC = () => {
                   <span>Name on card *</span>
                   <input
                     name="nameOnCard"
+                    className="payment_inputs"
                     value={form.nameOnCard}
                     onChange={handleChange}
                     type="text"
@@ -118,6 +119,7 @@ const PaymentPage: React.FC = () => {
                   <span>Card number *</span>
                   <input
                     name="cardNumber"
+                    className="payment_inputs"
                     value={form.cardNumber}
                     onChange={handleChange}
                     type="text"
@@ -131,6 +133,7 @@ const PaymentPage: React.FC = () => {
                   <span>Expiry (MM/YY) *</span>
                   <input
                     name="expiry"
+                    className="payment_inputs"
                     value={form.expiry}
                     onChange={handleChange}
                     type="text"
@@ -142,6 +145,7 @@ const PaymentPage: React.FC = () => {
                   <span>CVV *</span>
                   <input
                     name="cvv"
+                    className="payment_inputs"
                     value={form.cvv}
                     onChange={handleChange}
                     type="password"
@@ -155,6 +159,7 @@ const PaymentPage: React.FC = () => {
                   <span>Billing address</span>
                   <textarea
                     name="billingAddress"
+                    className="payment_inputs"
                     value={form.billingAddress}
                     onChange={handleChange}
                     rows={3}
