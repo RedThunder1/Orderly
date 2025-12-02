@@ -84,14 +84,11 @@ export default function Shop() {
         }
 
         let list = JSON.parse(sessionStorage.getItem('cart') as string);
-        if (list != null) {
-            let items: any[] = []
-            items = items.concat(list);
-            items.push(purchaseItem);
-            sessionStorage.setItem('cart', JSON.stringify(items));
-        } else {
-            sessionStorage.setItem('cart', JSON.stringify(purchaseItem));
-        }
+        let items: any[] = []
+        if (list != null) { items = items.concat(list); }
+        items.push(purchaseItem);
+        sessionStorage.setItem('cart', JSON.stringify(items));
+
         setShowAlert(true);
         const timer = setTimeout(() => {
             setShowAlert(false);
@@ -119,6 +116,7 @@ export default function Shop() {
             items.push(new Item("Pizza", "Fresh delicious Pizza!", 7.99, [new Customization("Toppings", ["Pepperoni", "Cheese", "Sausage"]), new Customization("Stuffed Crust", [])]))
             items.push(new Item("Burger", "A really good burger!", 8.99, [new Customization("Bacon", [])]))
             items.push(new Item("Fries", "A good side for out great burgers!", 2.99, []))
+            console.log(JSON.stringify(items))
             setStoreItems(items)
             setActiveItems(items)
         }
