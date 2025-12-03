@@ -35,6 +35,7 @@ export default function Shops() {
         }
     }
 
+    /*
     function handleFilter() { // Unsure if this works as I cant test it yet
         const filter = document.getElementById("shops_searchbar") as HTMLInputElement;
         if (filter.value.length === 0) {
@@ -49,6 +50,7 @@ export default function Shops() {
             setActiveStores(newItems);
         }
     }
+     */
 
     useEffect(() => {
         renderShops()
@@ -56,10 +58,11 @@ export default function Shops() {
 
     return (
         <div className="shops">
-            <div className="shops_options">
-                <input className="shops_searchbar" id="shops_searchbar" type="text" placeholder="Search" />
-                <div className="shops_filter" onClick={handleFilter}>Filter</div>
+            {/*<div className="shops_options">
+                <input className="shops_searchbar" id="shops_searchbar" type="text" placeholder="Search"/>
+                    <div className="shops_filter" onClick={handleFilter}>Filter
             </div>
+            </div>*/}
 
             <h2>Featured Shops</h2>
             <div className="shops_container" id="shops_container">
