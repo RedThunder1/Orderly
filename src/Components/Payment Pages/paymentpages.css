@@ -10,7 +10,7 @@
 .payment-card {
   width: 100%;
   max-width: 900px;
-  background: #fdfdfd;
+  background: #191b1c;
   border-radius: 14px;
   padding: 1.75rem;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
@@ -19,13 +19,13 @@
 .payment-header h2 {
   margin: 0;
   font-size: 1.6rem;
-  color: #111827;
+  color: #f8f8ff;
 }
 
 .payment-header p {
   margin: 0.35rem 0 1.5rem;
   font-size: 0.9rem;
-  color: #6b7280;
+  color: #8c909a;
 }
 
 .payment-layout {
@@ -41,7 +41,7 @@
 }
 
 .order-summary {
-  background: #ffffff;
+  background: #121415;
   border-radius: 10px;
   padding: 1.1rem 1.2rem;
   border: 1px solid #e5e7eb;
@@ -50,7 +50,7 @@
 .order-summary h3 {
   margin: 0 0 0.75rem;
   font-size: 1rem;
-  color: #111827;
+  color: #1d66ff;
 }
 
 .summary-row {
@@ -58,7 +58,6 @@
   justify-content: space-between;
   margin-bottom: 0.35rem;
   font-size: 0.95rem;
-  color: #374151;
 }
 
 .summary-total {
@@ -71,13 +70,13 @@
 .summary-note {
   margin-top: 0.6rem;
   font-size: 0.75rem;
-  color: #000000;
+  color: #ffffff;
 }
 
 .payment-form-wrapper h3 {
   margin: 0 0 0.6rem;
   font-size: 1rem;
-  color: #111827;
+  color: #0052ff;
 }
 
 .payment-form {
@@ -101,15 +100,14 @@
   border: 1px solid #d1d5db;
   font-size: 0.95rem;
   outline: none;
-  background-color: #f9fafb;
-  color: #000;
+  background-color: #121415;
 }
 
 .payment-form input:focus,
 .payment-form textarea:focus {
   border-color: #10b981;
   box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.25);
-  background-color: #ffffff;
+  background-color: #121415;
 }
 
 .payment-grid {
@@ -159,9 +157,9 @@
 }
 
 .payment_inputs { /* This was effecting other pages so I changed it */
-  color: #000;
-  background-color: #fff;
-  caret-color: #000;
+  color: #fff;
+  background-color: #121415;
+  caret-color: #fff;
 }
 
 .payment-status.status-error {
@@ -170,21 +168,20 @@
 }
 
 .payment-form .form-row label span {
-  color: #000;
+  color: #fff;
   font-weight: 600;
 }
 
 .payment-form input,
 .payment-form textarea {
-  background-color: #f3f4f6;  /* soft dark gray */
+  background-color: #121415;  /* soft dark gray */
   border: 1px solid #d1d5db;
-  color: #000; /* keep text readable */
 }
 
 /* When user clicks into the box */
 .payment-form input:focus,
 .payment-form textarea:focus {
-  background-color: #ffffff;
+  background-color: #121415;
   border-color: #10b981;
   box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.25);
   color: #000;

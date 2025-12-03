@@ -56,7 +56,7 @@
 }
 
 .shop_items_container {
-    background-color: #1b212c;
+    background-color: rgba(27, 33, 44, 0.75);
     border-radius: 10px 10px 0 0;
     width: 90%;
     height: 1000px;
@@ -94,7 +94,9 @@
 .shop_item {
     position: relative;
     background-color: rgba(10, 13, 19, 0.6);
-    width: 100%;
+    width: calc(100% - 20px);
+    margin: 5px auto 0 auto;
+    padding: 5px;
     height: 100px;
     border-radius: 10px;
 }
@@ -116,14 +118,14 @@
 .shop_item_price {
     position: absolute;
     right: 130px;
-    top: 30px;
+    top: 35px;
     font-size: 26px;
 }
 
 .shop_item_buy {
     position: absolute;
     right: 0;
-    top: 20px;
+    top: 25px;
     background-color: #1b212c;
     height: 50px;
     width: 100px;
@@ -135,13 +137,16 @@
 
 .customize {
     width: 800px;
-    height: 100vh;
+    height: 85vh;
     background-color: #1b212c;
     position: absolute;
     display: flex;
     align-items: center;
     flex-direction: column;
     z-index: 10;
+    top: 10vh;
+    border-radius: 15px;
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .customize > h1 {
@@ -165,11 +170,13 @@
 }
 
 #customize_form {
+    background-color: #0A0D1399;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 500px;
+    width: 90%;
+    height: 550px;
     align-items: center;
+    border-radius: 15px;
 }
 
 

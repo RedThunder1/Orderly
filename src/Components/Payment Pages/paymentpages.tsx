@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import api from "../../api";
 import "./paymentpages.css";
 
@@ -24,9 +24,10 @@ const PaymentPage: React.FC = () => {
     null
   );
   const [isSubmitting, setIsSubmitting] = useState(false);
+  let cart = JSON.parse(sessionStorage.getItem("cart") as string);
 
   function handleChange(
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) {
     const { name, value } = e.target;
     setForm((prev) => ({
@@ -68,6 +69,23 @@ const PaymentPage: React.FC = () => {
     }
   }
 
+    useEffect(() => {
+        if (cart !== null) {
+            let price = 0;
+            let tax;
+            let total;
+            for (let item of cart) {
+                price += item.price
+            }
+            tax = price * 0.055; //sample tax rate
+            tax = Math.round(tax * 100) / 100;
+            total = price + tax
+            document.getElementById("purchase_price")!!.innerText = '$' + price.toString();
+            document.getElementById("purchase_tax")!!.innerText = '$' + tax.toString();
+            document.getElementById("purchase_total")!!.innerText = '$' + total.toString();
+        }
+    }, []);
+
   return (
     <div className="payment-page">
       <div className="payment-card">
@@ -82,17 +100,17 @@ const PaymentPage: React.FC = () => {
             <h3>Order Summary</h3>
             <div className="summary-row">
               <span>Items</span>
-              <span>$32.00</span>
+              <span id="purchase_price">$32.00</span>
             </div>
             <div className="summary-row">
               <span>Tax</span>
-              <span>$2.56</span>
+              <span id="purchase_tax">$2.56</span>
             </div>
             <div className="summary-row summary-total">
               <span>Total</span>
-              <span>$34.56</span>
+              <span id="purchase_total">$34.56</span>
             </div>
-            <p className="summary-note">* Demo values for class project</p>
+            <p className="summary-note"></p>
           </section>
 
           {/* Payment Form */}

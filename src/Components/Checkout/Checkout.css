@@ -12,11 +12,12 @@
 }
 
 .checkout_item_list {
-    background-color: #1b212c;
+    background-color: rgba(27, 33, 44);
     border-radius: 10px;
-    width: 90%;
+    width: 800px;
     height: calc(100vh - 300px);
     overflow: scroll;
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .checkout_details {
@@ -24,7 +25,8 @@
     border-radius: 10px;
     background-color: #1b212c;
     height: 100px;
-    width: 90%;
+    width: 800px;
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 #checkout_price {
@@ -53,7 +55,8 @@
 .checkout_item {
     position: relative;
     background-color: rgba(10, 13, 19, 0.6);
-    width: 100%;
+    width: calc(100% - 20px);
+    margin: 0 auto 0 auto;
     min-height: 80px;
     height: fit-content;
     border-radius: 10px;
