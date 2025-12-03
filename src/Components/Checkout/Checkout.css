@@ -54,11 +54,11 @@
 
 .checkout_item {
     position: relative;
-    background-color: rgba(10, 13, 19, 0.6);
     margin: -5px auto 0 auto;
     min-height: 80px;
     height: fit-content;
-    border-radius: 10px;
+
+    border-bottom: 1px solid #12141b;
 }
 
 .checkout_remove_item {
