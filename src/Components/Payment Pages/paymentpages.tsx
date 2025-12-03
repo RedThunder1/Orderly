@@ -79,7 +79,7 @@ const PaymentPage: React.FC = () => {
             }
             tax = price * 0.055; //sample tax rate
             tax = Math.round(tax * 100) / 100;
-            total = price + tax
+            total = Math.round((price + tax) * 100) / 100;
             document.getElementById("purchase_price")!!.innerText = '$' + price.toString();
             document.getElementById("purchase_tax")!!.innerText = '$' + tax.toString();
             document.getElementById("purchase_total")!!.innerText = '$' + total.toString();
