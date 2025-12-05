@@ -83,6 +83,7 @@ const PaymentPage: React.FC = () => {
             document.getElementById("purchase_price")!!.innerText = '$' + price.toString();
             document.getElementById("purchase_tax")!!.innerText = '$' + tax.toString();
             document.getElementById("purchase_total")!!.innerText = '$' + total.toString();
+            document.getElementById("pay_btn")!!.innerText = 'Pay $' + total.toString();
         }
     }, []);
 
@@ -186,7 +187,7 @@ const PaymentPage: React.FC = () => {
                 </label>
               </div>
 
-              <button className="pay-btn" type="submit" disabled={isSubmitting}>
+              <button className="pay-btn" id="pay_btn" type="submit" disabled={isSubmitting}>
                 {isSubmitting ? "Processing..." : "Pay $34.56"}
               </button>
 

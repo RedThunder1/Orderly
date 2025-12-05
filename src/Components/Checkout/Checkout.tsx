@@ -29,10 +29,9 @@ export default function Checkout() {
             }
 
             setItems(cart);
-            document.getElementById("checkout_price")!!.innerText = price.toString();
+            price = Math.round(price * 100) / 100
+            document.getElementById("checkout_price")!!.innerText = 'Cart Price: $' + price.toString();
         }
-
-        
     },[])
 
     function removeFromCart(item: any, index: number, event: any) {
