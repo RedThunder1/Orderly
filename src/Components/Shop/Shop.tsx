@@ -38,14 +38,18 @@ class Item {
 
 export default function Shop() {
     /*
-    Created some simple Items to add for testing purposes
     let items = []
-    items.push(new Item("Pizza", "Fresh delicious Pizza!", 7.99, [new Customization("Toppings", ["Pepperoni", "Cheese", "Sausage"]), new Customization("Stuffed Crust", [])]))
-    items.push(new Item("Burger", "A really good burger!", 8.99, [new Customization("Bacon", [])]))
-    items.push(new Item("Fries", "A good side for out great burgers!", 2.99, [])
+    items.push(new Item("Soft Shell Taco", "Amazing soft shell tacos!", 2.99, [new Customization("Meat", ["Beef", "Chicken", "Pork"]), new Customization("Extra Cheese", []), new Customization("Hot Sauce", [])]))
+    items.push(new Item("Burrito", "Delicious Burritos!", 3.99, [new Customization("Meat", ["Beef", "Chicken", "Pork"]), new Customization("Extra Cheese", []), new Customization("Hot Sauce", [])]))
+    items.push(new Item("Enchilda", "Tasty Enchilada!", 4.99, [new Customization("Meat", ["Beef", "Chicken", "Pork"]), new Customization("Extra Cheese", []), new Customization("Hot Sauce", [])]))
+    items.push(new Item("Chips and Salsa", "Fresh Chips and Salsa", 1.99, []))
+    items.push(new Item("Nachos", "Cheesy Nachos", 1.99, []))
+    items.push(new Item("Taquitos", "Amazing Taquitos", 3.99, []))
 
     console.log(JSON.stringify(items));
+
      */
+
     const [storeItems, setStoreItems] = useState<Item[]>([]);
     const [activeItems, setActiveItems] = useState<Item[]>([]);
     const [customization, setCustomization] = useState<any[]>([]);
